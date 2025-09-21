@@ -48,11 +48,11 @@ switch ($mode) {
 <section class="content">
   <div class="container-fluid">
 
-    <div class="card">
+    <div class="card card-dark">
       <div class="card-header">
         <h3 class="card-title"><?= $judul_form ?></h3>
         <div class="card-tools">
-          <a href="<?= site_url('relawan') ?>" class="btn btn-secondary btn-sm">← Kembali</a>
+          <a href="<?= site_url('relawan') ?>" class="btn btn-primary btn-sm">← Kembali</a>
         </div>
       </div>
 

@@ -4,7 +4,6 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
   
   <a href="<?= site_url('brand') ?>" class="brand-link">
-    <i class="brand-image fa fa-bug" style="font-size: 2rem;"></i>
     <span class="brand-text ml-1">Menu Destana</span>
   </a>
 
@@ -14,9 +13,9 @@
       <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu">
 
         <li class="nav-item">
-          <a href="<?= site_url('welcome') ?>" class="nav-link <?= $segment1 == '' ? 'active' : '' ?>">
+          <a href="<?= site_url('welcome') ?>" class="nav-link <?= $segment1 == 'welcome' ? 'active' : '' ?>">
             <i class="nav-icon fas fa-home"></i>
-            <p>Beranda</p>
+            <p>Dashboard</p>
           </a>
         </li>
 

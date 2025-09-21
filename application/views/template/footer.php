@@ -4,7 +4,7 @@
 <footer class="main-footer text-sm">
   <strong>&copy; <?= date('Y'); ?> • Pemerintah Kabupaten Kebumen.</strong>
   <div class="float-right d-none d-sm-inline">
-    BPBD Kebumen x SiTana?DesTana?
+    BPBD Kebumen
   </div>
 </footer>
 

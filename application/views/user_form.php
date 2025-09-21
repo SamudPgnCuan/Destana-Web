@@ -41,8 +41,10 @@ switch ($mode) {
 <section class="content">
   <div class="container-fluid">
     <form action="<?= site_url($aksi) ?>" method="post">
+
       <div class="card card-dark">
-        <div class="card-header"><h3 class="card-title"><?= $judul_form ?></h3></div>
+        <div class="card-header">
+          <h3 class="card-title"><?= $judul_form ?></h3></div>
         <div class="card-body">
 
           <div class="form-group">

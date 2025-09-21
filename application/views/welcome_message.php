@@ -20,7 +20,7 @@
     <div class="card">
       <div class="card-body">
         <div class="d-flex align-items-center mb-2">
-          <h5 class="mb-0">Bencana per Bulan</h5>
+          <h5>Bencana per Bulan</h5>
           <select id="selectYear" class="form-control" style="width:120px; margin-left:12px;"></select>
           <button id="btnRefreshCharts" class="btn btn-sm btn-light ml-2">Refresh</button>
         </div>
@@ -40,7 +40,9 @@
 
     <!-- Chart Bar -->
     <div class="card mt-4">
-      <div class="card-header"><h3 class="card-title">Persentase per Kecamatan</h3></div>
+      <div class="card-header">
+        <h5>Persentase per Kecamatan</h5>
+      </div>
       <div class="card-body">
         <canvas id="chartBar"></canvas>
       </div>
