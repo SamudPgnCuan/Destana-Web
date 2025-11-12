@@ -39,5 +39,5 @@ jobs:
         with:
           args: >
             -Dsonar.organization=SamudPgnCuan
-            -Dsonar.projectKey=Destana-Web
+            -Dsonar.projectKey=SamudPgnCuan_Destana-Web
             -Dsonar.php.coverage.reportPaths=coverage.xml
