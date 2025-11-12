@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   $(desaSelect).select2({
-    placeholder: 'Pilih Desa (setelah pilih kecamatan :3)',
+    placeholder: 'Pilih Desa',
     allowClear: true,
     width: '100%',
     dropdownParent: $(desaSelect).parent()
