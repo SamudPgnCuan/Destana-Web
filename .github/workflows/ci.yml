@@ -38,6 +38,6 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
           args: >
-            -Dsonar.organization=SamudPgnCuan
+            -Dsonar.organization=samudpgncuan
             -Dsonar.projectKey=SamudPgnCuan_Destana-Web
             -Dsonar.php.coverage.reportPaths=coverage.xml
