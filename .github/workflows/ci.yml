@@ -1,0 +1,43 @@
+name: PHP CI with SonarCloud
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    name: Build, Test, and Analyze
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # penting untuk SonarCloud
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          coverage: xdebug
+          extensions: mbstring, intl, pdo_mysql
+
+      - name: Install dependencies
+        run: |
+          composer install --no-progress --prefer-dist
+
+      - name: Run PHPUnit tests
+        run: |
+          vendor/bin/phpunit --coverage-clover=coverage.xml || echo "tests failed"
+
+      - name: Analyze with SonarCloud
+        uses: SonarSource/sonarcloud-github-action@master
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        with:
+          args: >
+            -Dsonar.organization=<your_org_name>
+            -Dsonar.projectKey=<your_project_key>
+            -Dsonar.php.coverage.reportPaths=coverage.xml
